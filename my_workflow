@@ -43,5 +43,9 @@ jobs:
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-         
+    
+    # multiple jobs run in parallel by default
+    publish-artifact:
+      # you can specify if this job requires another one to previously run with this
+      needs: build-java
 
