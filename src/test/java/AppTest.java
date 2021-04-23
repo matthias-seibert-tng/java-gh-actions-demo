@@ -23,7 +23,7 @@ public class AppTest {
 
         int pi = myApp.calculatePiForN(1000).setScale(0, RoundingMode.HALF_UP).intValue();
 
-        assertEquals(4, pi);
+        assertEquals(3, pi);
     }
 
 }
