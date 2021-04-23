@@ -12,5 +12,14 @@ public class AppTest {
 
         assertEquals("OK", result);
     }
+    
+    @Test
+    public void testPiCalculation() {
+        App myApp = new App();
+
+        int pi = myApp.calculatePiForN(1000).setScale(0, RoundingMode.HALF_UP).intValue();
+
+        assertEquals(4, pi);
+    }
 
 }
